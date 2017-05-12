@@ -1,0 +1,1 @@
+{"version":3,"sources":["../lib/js/navigatorEmitter.js"],"names":[],"mappings":"yDAAA,4C;;AAEe,4B","file":"navigatorEmitter.js","sourcesContent":["import EventEmitter from './EventEmitter';\n\nexport default new EventEmitter();\n"]}

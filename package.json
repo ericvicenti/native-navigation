@@ -11,7 +11,7 @@
     "run:android": "./gradlew installDebug && npm run start:android",
     "lint": "eslint ./",
     "build": "npm run build:js && npm run build:android && npm run build:ios",
-    "build:js": "exit 0",
+    "build:js": "babel lib/js/ --source-maps --out-dir dist-js/",
     "build:ios": "bundle install --binstubs ./examples/ios && bundle exec pod install --project-directory=./example/ios/",
     "build:android": "./gradlew :native-navigation:assembleDebug",
     "ci": "npm run lint",
@@ -44,10 +44,11 @@
     "react-native-safe-module": "^1.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^6.1.2",
-    "babel-plugin-module-resolver": "^2.3.0",
+    "babel-plugin-module-resolver": "^2.7.0",
     "babel-preset-airbnb": "^1.1.1",
-    "babel-preset-react-native": "1.9.0",
+    "babel-preset-react-native": "^1.9.0",
     "eslint": "^3.3.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-import-resolver-babel-module": "^2.2.1",
